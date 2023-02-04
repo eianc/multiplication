@@ -1,0 +1,28 @@
+{
+  "compilerOptions": {
+    "allowJs": true /* Allow JavaScript files to be compiled. */,
+    "allowSyntheticDefaultImports": true /* Allow default imports from modules with no default export. This does not affect code emit, just typechecking. */,
+    "esModuleInterop": true /* Enables emit interoperability between CommonJS and ES Modules via creation of namespace objects for all imports. Implies 'allowSyntheticDefaultImports'. */,
+    "forceConsistentCasingInFileNames": true /* Disallow inconsistently-cased references to the same file. */,
+    "isolatedModules": true /* Transpile each file as a separate module (similar to 'ts.transpileModule'). */,
+    "jsx": "react" /* Specify JSX code generation: 'preserve', 'react-native', or 'react'. */,
+    "lib": [
+      "DOM",
+      "DOM.Iterable",
+      "ESNext"
+    ] /* List of libraries to permit compiling of (requires polyfilling for browsers with no native support) */,
+    "module": "commonjs" /* Specify module code generation: 'none', 'commonjs', 'amd', 'system', 'umd', 'es2015', 'es2020', or 'ESNext'. */,
+    "moduleResolution": "node" /* Specify module resolution strategy: 'node' (Node.js) or 'classic' (TypeScript pre-1.6). */,
+    "noEmit": false /* Do not emit outputs. */,
+    "noImplicitReturns": true /* Report error when not all code paths in function return a value. */,
+    "noUnusedLocals": true /* Report errors on unused locals. */,
+    "pretty": true /* Stylize errors and messages using color and context. */,
+    "resolveJsonModule": true /* Include modules imported with .json extension. */,
+    "skipLibCheck": true /* Skip type checking of all declaration files (*.d.ts). */,
+    "strict": true /* Enable all strict type-checking options. */,
+    "suppressImplicitAnyIndexErrors": true /* Suppress --noImplicitAny errors for indexing objects lacking index signatures. See https://github.com/Microsoft/TypeScript/issues/1232#issuecomment-64510362 for more details. */,
+    "target": "es2020" /* Specify ECMAScript target version: 'ES3' (default), 'ES5', 'ES2015', 'ES2016', 'ES2017', 'ES2018', 'ES2019', 'ES2020', or 'ESNEXT'. */
+  },
+  "exclude": ["node_modules", "public"],
+  "include": ["**/*.ts", "**/*.tsx", "test/**/*.ts"]
+}
