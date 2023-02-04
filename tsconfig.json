@@ -15,7 +15,7 @@
     "moduleResolution": "node" /* Specify module resolution strategy: 'node' (Node.js) or 'classic' (TypeScript pre-1.6). */,
     "noEmit": false /* Do not emit outputs. */,
     "noImplicitReturns": true /* Report error when not all code paths in function return a value. */,
-    "noUnusedLocals": true /* Report errors on unused locals. */,
+    "noUnusedLocals": false /* Report errors on unused locals. */,
     "pretty": true /* Stylize errors and messages using color and context. */,
     "resolveJsonModule": true /* Include modules imported with .json extension. */,
     "skipLibCheck": true /* Skip type checking of all declaration files (*.d.ts). */,
@@ -24,5 +24,8 @@
     "target": "es2020" /* Specify ECMAScript target version: 'ES3' (default), 'ES5', 'ES2015', 'ES2016', 'ES2017', 'ES2018', 'ES2019', 'ES2020', or 'ESNEXT'. */
   },
   "exclude": ["node_modules", "public"],
-  "include": ["**/*.ts", "**/*.tsx", "test/**/*.ts"]
+  "include": ["**/*.ts", "**/*.tsx", "test/**/*.ts"],
+  "rules": {
+    "no-unused-vars": "off"
+  }
 }
