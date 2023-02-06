@@ -1,8 +1,11 @@
 import { css } from "@emotion/css";
+export const UNSELECTED_COLOUR = "#f2e9e4";
+export const SELECTED_COLOUR = "#14213d";
+export const MULTIPLE_COLOUR = "#fca311";
 
 export const button = css`
   border: 1px solid #fff;
-  background-color: #f2e9e4;
+  background-color: ${UNSELECTED_COLOUR};
   width: 100%;
   height: 100%;
   font-size: 16px;
@@ -10,16 +13,16 @@ export const button = css`
 
 export const selectedNumber = css`
   border: 1px solid #fff;
-  background-color: #14213d;
+  background-color: ${SELECTED_COLOUR};
   color: #fff;
   width: 100%;
   height: 100%;
   font-size: 16px;
 `;
 
-export const multiplier = css`
+export const multiple = css`
   border: 1px solid #fff;
-  background-color: #fca311;
+  background-color: ${MULTIPLE_COLOUR};
   color: #fff;
   width: 100%;
   height: 100%;

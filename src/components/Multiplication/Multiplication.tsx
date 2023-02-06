@@ -1,30 +1,34 @@
 import React, { useState } from "react";
-import { generateArrayOfNumbers } from "../../utils/generateArrayOfNumbers";
 import * as styles from "./Multiplication.styles";
 import { ButtonNumber } from "../ButtonNumber/ButtonNumber";
 import { getCommonMultiples } from "../../utils/getCommonMultiples";
 import {
-  MAX_NUMBER,
-  MAX_NUMBERS_SELECTED,
   NO_MULTIPLES_MESSAGE,
   MULTIPLES_MESSAGE,
   MULTIPLES_START_AGAIN_MESSAGE,
 } from "./constants";
 
-export const Multiplication = () => {
-  const numbers = generateArrayOfNumbers(MAX_NUMBER);
+interface MultiplicationProps {
+  numbers: number[];
+  maxNumbersSelected: number;
+}
+
+export const Multiplication = ({
+  numbers,
+  maxNumbersSelected,
+}: MultiplicationProps) => {
   const [selectedNumbers, setSelectedNumbers] = useState<number[]>([]);
-  const [multipliers, setMultipliers] = useState<number[]>([]);
+  const [multiples, setMultiples] = useState<number[]>([]);
   const [info, setInfo] = useState("");
 
   const handleClick = (e: React.MouseEvent<HTMLButtonElement>) => {
     const selectedNumber = parseInt((e.target as HTMLButtonElement).value);
-    if (selectedNumbers.length < MAX_NUMBERS_SELECTED) {
+    if (selectedNumbers.length < maxNumbersSelected) {
       const selected = [...selectedNumbers, selectedNumber];
       setSelectedNumbers(selected);
 
       const common = getCommonMultiples(selected, numbers);
-      setMultipliers(common);
+      setMultiples(common);
 
       common.length > 0
         ? setInfo(`${MULTIPLES_MESSAGE} ${selected.join(" and ")}`)
@@ -51,7 +55,9 @@ export const Multiplication = () => {
       >
         Clear selections
       </button>
-      <p className={styles.info}>{info}</p>
+      <p className={styles.info} data-testid="info">
+        {info}
+      </p>
       <ul className={styles.grid}>
         {numbers.map((i) => (
           <li key={i} className={styles.gridItem}>
@@ -59,7 +65,7 @@ export const Multiplication = () => {
               value={i}
               onClick={handleClick}
               selectedNumbers={selectedNumbers}
-              multipliers={multipliers}
+              multiples={multiples}
             />
           </li>
         ))}
