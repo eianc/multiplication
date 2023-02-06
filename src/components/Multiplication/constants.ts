@@ -1,4 +1,4 @@
-export const MAX_NUMBER = 20;
+export const MAX_NUMBER = 144;
 export const MAX_NUMBERS_SELECTED = 2;
 
 export const NO_MULTIPLES_MESSAGE = "There are no multiples of";

@@ -12,10 +12,10 @@ export const grid = css`
   list-style-type: none;
   padding: 0;
 
-  @media only screen and (min-width: 480px) {
+  @media only screen and (min-width: 768px) {
     grid-template-columns: repeat(2, 1fr);
   }
-  @media only screen and (min-width: 768px) {
+  @media only screen and (min-width: 1024px) {
     grid-template-columns: repeat(3, 1fr);
   }
 `;
