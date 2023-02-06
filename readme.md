@@ -1,6 +1,6 @@
 The tools I used for this solution are React, Typescript and React testing library. The initial solution I thought about was to check the multiples for each selected number and then filter the common multiples. That solution could work, however I found it not to be efficient. Therefore, my final solution was to get the least common multiple of the selected numbers and based on that to find the multiples. This solution is also easier to scale, as we can find the multiples of more than two numbers.
 
-What I would have liked to improve are:
+What I would have liked to improve:
 
 - the way the information is displayed when there are multiples, or when there are no multiples. For now I just added some information at the top of the page, however if you are on mobile you have to scroll to the top to get clarification about the multiples
 - I think overall UI/UX can be improved, as is very hard to see in a glance the multiples
