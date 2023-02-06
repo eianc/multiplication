@@ -1,3 +1,13 @@
+The tools I used for this solution are React, Typescript and React testing library. The initial solution I thought about was to check the multiples for each selected number and then filter the common multiples. That solution could work, however I found it not to be efficient. Therefore, my final solution was to get the least common multiple of the selected numbers and based on that to find the multiples. This solution is also easier to scale, as we can find the multiples of more than two numbers.
+What I would have liked to improve are:
+
+- the way the information is displayed when there are multiples, or when there are no multiples. For now I just added some information at the top of the page, however if you are on mobile you have to scroll to the top to get clarification about the multiples
+- I think overall UI/UX can be improved, as is very hard to see in a glance the multiples
+- the styling solution can be improved, in the sense that we can have css variables for the colors, and a more robust way of using the styles
+- finding another solution for testing how the selected numbers and the multiples are displayed
+- find a better solution for testing the selected numbers and multipliers, if we are to add another button in the Multiplication component, all the tests need to me amended to accomodate the new change
+- rename some of the components/variables used so is much clearer when reading the code
+
 # Which? Front-end Exercise
 
 This repository provides information and a project boilerplate for completing the test exercise sent to candidates applying for front-end roles at Which?.
@@ -12,12 +22,12 @@ Which? primarily uses [React] and [TypeScript] in our front-end projects but you
 
 We have provided [Jest] to test your code which is a fully featured testing framework. It includes a test runner, assertions, and mock functions.
 
-[React]: https://reactjs.org/
-[TypeScript]: https://www.typescriptlang.org/
-[Webpack]: https://webpack.js.org/
-[Babel]: https://babeljs.io/
+[react]: https://reactjs.org/
+[typescript]: https://www.typescriptlang.org/
+[webpack]: https://webpack.js.org/
+[babel]: https://babeljs.io/
 [server]: https://github.com/webpack/webpack-dev-server
-[Jest]: https://jestjs.io/
+[jest]: https://jestjs.io/
 
 ### Requirements
 
@@ -31,34 +41,34 @@ To get started you'll need to make sure you have the following software tools in
 
 1. Clone this Git repository and change to the new directory that has been created:
 
-    ```sh
-    git clone https://github.com/whichdigital/fe-techtest.git --depth 1
-    cd fe-techtest
-    ```
+   ```sh
+   git clone https://github.com/whichdigital/fe-techtest.git --depth 1
+   cd fe-techtest
+   ```
 
 2. Install all of the project dependencies using npm:
 
-    ```sh
-    npm install
-    ```
+   ```sh
+   npm install
+   ```
 
 3. Once installed you can run the Webpack development server:
 
-    ```sh
-    npm start
-    ```
+   ```sh
+   npm start
+   ```
 
-    Now open [http://localhost:8080/](http://localhost:8080/) in your browser and you should see a basic HTML page. 
-    
-    If you open the developer console in the browser, you should see a welcome message which confirms everything is loading and running correctly.
+   Now open [http://localhost:8080/](http://localhost:8080/) in your browser and you should see a basic HTML page.
 
-    To stop the server when no longer needed, you can press <kbd>ctrl</kbd> + <kbd>c</kbd> in the terminal.
+   If you open the developer console in the browser, you should see a welcome message which confirms everything is loading and running correctly.
+
+   To stop the server when no longer needed, you can press <kbd>ctrl</kbd> + <kbd>c</kbd> in the terminal.
 
 4. And to run your tests use the following command:
 
-    ```sh
-    npm test
-    ```
+   ```sh
+   npm test
+   ```
 
 ## The exercise
 
@@ -91,12 +101,12 @@ We'd appreciate it if you could update this readme with additional information a
 
 Your completed test exercise will be marked according to a score sheet. We will focus on the following areas:
 
-* That your solution meets the requirements.
-* How usable your application is when using assistive technology.
-* Your approach to testing the application.
-* The use of responsive design.
-* Clear project structure and conventions.
-* How readable and understandable your code is.
-* The performance of your completed application.
+- That your solution meets the requirements.
+- How usable your application is when using assistive technology.
+- Your approach to testing the application.
+- The use of responsive design.
+- Clear project structure and conventions.
+- How readable and understandable your code is.
+- The performance of your completed application.
 
 You won’t be assessed on the appearance of the app beyond the visual requirements and accessibility criteria.
