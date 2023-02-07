@@ -9,7 +9,7 @@ test("renders the correct styles for a selected number", () => {
   const selectedNumbers = [2];
   const multiples = [4, 6];
 
-  const { getByText } = render(
+  const { getByRole } = render(
     <ButtonNumber
       value={2}
       selectedNumbers={selectedNumbers}
@@ -17,7 +17,7 @@ test("renders the correct styles for a selected number", () => {
       onClick={handleClick}
     />
   );
-  const button = getByText("2");
+  const button = getByRole("button");
   expect(button).toHaveStyle({
     backgroundColor: styles.SELECTED_COLOUR,
   });
@@ -27,7 +27,7 @@ test("renders the correct styles for a multiple", () => {
   const selectedNumbers = [2];
   const multiples = [4, 6];
 
-  const { getByText } = render(
+  const { getByRole } = render(
     <ButtonNumber
       value={4}
       selectedNumbers={selectedNumbers}
@@ -35,7 +35,7 @@ test("renders the correct styles for a multiple", () => {
       onClick={handleClick}
     />
   );
-  const button = getByText("4");
+  const button = getByRole("button");
   expect(button).toHaveStyle({
     backgroundColor: styles.MULTIPLE_COLOUR,
   });
@@ -45,7 +45,7 @@ test("renders the correct styles for a non-selected, non-multiple number", () =>
   const selectedNumbers = [2, 3];
   const multiples = [6, 12];
 
-  const { getByText } = render(
+  const { getByRole } = render(
     <ButtonNumber
       value={4}
       selectedNumbers={selectedNumbers}
@@ -53,7 +53,7 @@ test("renders the correct styles for a non-selected, non-multiple number", () =>
       onClick={handleClick}
     />
   );
-  const button = getByText("4");
+  const button = getByRole("button");
   expect(button).toHaveStyle({
     backgroundColor: styles.UNSELECTED_COLOUR,
   });
@@ -63,7 +63,7 @@ test("calls the handleClick function when clicked", () => {
   const selectedNumbers = [2, 3];
   const multiples = [6, 12];
 
-  const { getByText } = render(
+  const { getByRole } = render(
     <ButtonNumber
       value={2}
       selectedNumbers={selectedNumbers}
@@ -71,7 +71,7 @@ test("calls the handleClick function when clicked", () => {
       onClick={handleClick}
     />
   );
-  const button = getByText("2");
+  const button = getByRole("button");
   fireEvent.click(button);
   expect(handleClick).toHaveBeenCalled();
 });

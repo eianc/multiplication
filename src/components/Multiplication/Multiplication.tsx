@@ -22,7 +22,8 @@ export const Multiplication = ({
   const [info, setInfo] = useState("");
 
   const handleClick = (e: React.MouseEvent<HTMLButtonElement>) => {
-    const selectedNumber = parseInt((e.target as HTMLButtonElement).value);
+    const selectedNumber = parseInt(e.currentTarget.value);
+
     if (selectedNumbers.length < maxNumbersSelected) {
       const selected = [...selectedNumbers, selectedNumber];
       setSelectedNumbers(selected);
@@ -52,10 +53,16 @@ export const Multiplication = ({
         onClick={clearSelection}
         className={styles.clearButton}
         type="button"
+        aria-label="Clear selections"
       >
         Clear selections
       </button>
-      <p className={styles.info} data-testid="info">
+      <p
+        className={styles.info}
+        data-testid="info"
+        id="info-message"
+        aria-describedby="info-message"
+      >
         {info}
       </p>
       <ul className={styles.grid}>
