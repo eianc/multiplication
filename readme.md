@@ -8,6 +8,7 @@ What I would have liked to improve:
 - finding another solution for testing how the selected numbers and the multiples are displayed
 - find a better solution for testing the selected numbers and multipliers, if we are to add another button in the Multiplication component, all the tests need to me amended to accomodate the new change
 - rename some of the components/variables used so is much clearer when reading the code
+- improve accessibility on screen readers
 
 # Which? Front-end Exercise
 
