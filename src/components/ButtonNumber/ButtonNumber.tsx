@@ -38,7 +38,7 @@ export const ButtonNumber = ({
       <span id={`number-${value}`} className={styles.selectedNumber}>
         {value}
       </span>
-      {isMultiple && (
+      {isMultiple && !isSelected && (
         <span>is a multiple of {selectedNumbers.join(" and ")}</span>
       )}
     </button>
